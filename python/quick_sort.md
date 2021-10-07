@@ -18,7 +18,10 @@ def partition(my_list, start, end):
     return b
 
 # 퀵 정렬    
-def quicksort(my_list, start, end):
+def quicksort(my_list, start=0, end=None):
+    if end == None:
+        end = len(my_list) - 1
+
     # base case
     if end - start < 1:
         return
